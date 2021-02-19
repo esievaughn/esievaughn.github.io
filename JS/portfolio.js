@@ -22,3 +22,10 @@ function closeForm() {
   document.getElementById("myForm").style.display = "none";
 }
 //END POP UP FORM//
+
+var x=0;
+$(document).ready(function(){
+    $(window).resize(function(){
+      $("span").text(x++);
+    });
+  });

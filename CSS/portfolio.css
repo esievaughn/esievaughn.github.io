@@ -293,10 +293,12 @@ form {
 
 #profpic {
     position: absolute;
+    z-index: 0;
 }
 
 #profpic2 {
     position: absolute;
+    z-index: 0;
     opacity: 80%;
 }
 /*----------------------------------------
