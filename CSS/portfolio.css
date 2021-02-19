@@ -1,4 +1,6 @@
-/***** GENERAL STYLING *****/
+/*----------------------------------------
+  GENERAL STYLING
+------------------------------------------*/
 /* Body */
 body {
     margin: 0%;  /* This ensures our site displays all the way to the edge of the browser screen */
@@ -6,7 +8,6 @@ body {
     background-position: top;
     background-repeat: no-repeat;
     z-index: -1;
-    filter: grayscale(75%);
     background-color: lightsteelblue;
 }
 
@@ -18,6 +19,7 @@ h1 {
     margin-top: 3%; /* Adds a small margin above h1 elements */
     color: #ffc87c; 
     font-weight: bold;
+    filter: grayscale(75%);
 }
 
 
@@ -65,11 +67,6 @@ img {
     margin-right: auto;
 }
 
-/* Image element hover effects */
-img:hover {
-    transition: transform 1s; /* Transition lasts 1 second */
-	transform: scale(1.1); /* Image is increased slightly when hovered over */
-}
 
 /* The @media rule is used in media queries to apply different styles for different media/types of devices */
 /* On screens 576px and smaller the images will be 100px tall and centered vertically in the column */
@@ -95,13 +92,19 @@ video {
 footer {
     padding: 2%; /* This gives the footer padding that is equal to 2% of the width of the element's area */
     background-color: olive;
+    filter: grayscale(75%);
 }
-/***** END OF GENERAL STYLING *****/
+/*----------------------------------------
+    END GENERAL STYLING
+------------------------------------------*/
 
-/***** NAVBAR STYLING *****/
+/*----------------------------------------
+    NAVBAR STYLING
+------------------------------------------*/
 .Navbar {
     overflow: hidden; /* This ensures that any content that overflows beyond the boundary of our nav bar is not displayed */
     background-color: #DADED4; /* This colors the navbar black */
+    filter: grayscale(75%);
     position: fixed; /* This keeps the navbar at the top of the screen as we scroll */
     top: 0; /* This ensures no space is displayed above the navbar */
     width: 100%; /* This makes the navbar span the entire width of the page */
@@ -143,35 +146,45 @@ footer {
 .Navbar a.active { /* This targets the a element on the navbar with the "active" class */
     background-color: darkgray;
 }
-/***** END OF NAVBAR STYLING *****/
+/*----------------------------------------
+    END NAVBAR
+------------------------------------------*/
 
-/***** BACKGROUND IMAGE STYLING *****/
-
-/* Texts over the image */
+/*----------------------------------------
+    SLIDNG OVERLAY ANIMATION
+------------------------------------------*/
 .Background_Text {
     background: rgba(0, 0, 0, 0.5); /* This provides a semi-transparent background for the text to sit over */
     color: white; /* Makes the font color white */
     width: 100%; /* Ensures the video-text container fills the width of the video */
-    padding: 20px; /* This adds padding around the video-text container so that the background goes slightly beyond the text */
+    padding-top: .1vh;  /* This adds padding around the video-text container so that the background goes slightly beyond the text */
+    padding-bottom: 1vh;
     position: relative; /* This sets the text relative to its normal positioning, allowing us to use the animation below */
-    -webkit-animation: moveVideoText 5.75s;
-    animation: moveVideoText 5.75s;
+    -webkit-animation: movevideoText 5.75s;
+    animation: movevideoText 5.75s;
 }
 
 /* This animation effect causes the overlay video text to move up from the bottom of the page upon page load */
-@keyframes moveVideoText {
-    from {left: -100vw;} /* This sets the position of the video text to above the viewport */
-    to {left: 0vw;} /* This moves the video text to the normal positioning on the viewport */
-}
-/***** END OF VIDEO STYLING *****/
+@keyframes movevideoText {
+    from {right: -100vw;} /* This sets the position of the video text to above the viewport */
+    to {right: 0vw;} /* This moves the video text to the normal positioning on the viewport */
 
-/***** TABLE STYLING -  this section covers the styling of the columns and rows within the table *****/
+}
+
+/*----------------------------------------
+   END SLIDING OVERLAY
+------------------------------------------*/
+
+/*----------------------------------------
+    TABLE STYLING
+------------------------------------------*/
 * { /* The asterisk is a universal selector that applies this effect to all elements on the page */
     box-sizing: border-box; /* This creates a box with a border within which we will place most of our text */
 } 
 
 .Column_1 {
     float: left;
+    text-align: center;
     width: 50%; /* This ensures the column takes up half of the page width */
     padding: 10px;
     padding-top: 3%; /* This ensures there is space between the top of the column and our headings */
@@ -207,9 +220,13 @@ footer {
 	display: table; /* The display property specifies the type of display behavior; the table value tells the browser to treat the element as a table */
 	clear: both; /* This clears any other elements from floating on the left or the right of an element */
 }
-/***** END OF TABLE STYLING *****/
+/*----------------------------------------
+    END TABLE STYLING
+------------------------------------------*/
 
-/***** CONTACT FORM STYLING *****/
+/*----------------------------------------
+    Contact FORM
+------------------------------------------*/
 /* input[type=text] targets all text input sections of the contact form */
 input[type=text] {
     width: 100%; /* Each input box covers the full width of the container */
@@ -256,6 +273,128 @@ form {
     border-radius: 5px; /* Rounds the corners of the contact form */
     background-color: #f2f2f2; 
     padding: 10px; /* Adds padding to the contact form */
-    font-family: Verdana, Geneva, Tahoma, sans-serif
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    filter: grayscale(75%);
 }
-/***** END OF CONTACT FORM STYLING *****/
+/*----------------------------------------
+    END FORM
+------------------------------------------*/
+
+
+/*----------------------------------------
+    jQuery ANIMATION
+------------------------------------------*/
+
+#record {
+    position: absolute;
+    z-index: 0;
+}
+
+#sleeve {
+    position: absolute;
+    z-index: 0;
+    opacity: 80%;
+}
+/*----------------------------------------
+    END jQuery ANIMATION
+------------------------------------------*/
+
+
+/*----------------------------------------
+    POP UP FORM
+------------------------------------------*/
+.open-button {
+    background-color: #555;
+    border-radius: 7px;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+    position: relative;
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+  .form-popup {
+    display: none;
+    position: relative;
+    border: 3px solid #f1f1f1;
+    z-index: 1;
+}
+  
+
+  .form-container {
+    width: 100%;
+    padding: 10px;
+    background-color: white;
+}
+  
+ 
+  .form-container input[type=text], .form-container input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+}
+  
+
+  .form-container input[type=text]:focus, .form-container input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+  
+ 
+  .form-container .btn {
+    background-color: rgb(212, 142, 30);
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:10px;
+    opacity: 0.8;
+}
+  
+
+  .form-container .cancel {
+    background-color:rgb(190, 159, 19);
+}
+  
+
+  .form-container .btn:hover, .open-button:hover {
+    opacity: 1;
+}
+  /*----------------------------------------
+    END POP UP FORM
+------------------------------------------*/
+
+
+  /*----------------------------------------
+    GITHUB SOCIAL MEDIA BUTTON 
+------------------------------------------*/
+.btn2 {
+    padding: 1em 2em;
+    border: 0.125em solid #ffc87c;
+    box-shadow: 0.5em 0.5em 0 -0.125em #fff, 0.5em 0.5em #a0a0a0;
+    overflow: hidden;
+    position: relative;
+    color: lightslategray;
+    background-color: whitesmoke;
+    font: 18px "Space Mono";
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.3s;
+    margin: 6em;
+    font-weight: bold;
+    filter: grayscale(50%);
+
+}
+
+  .btn2:hover {
+    color: #fff;
+    box-shadow: 1em 1em 0 -0.125em #fff, 1em 1em #a0a0a0;
+}
+

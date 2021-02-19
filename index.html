@@ -6,6 +6,9 @@
         <meta name="viewport" content="width=device-width" />
         <title>Esie Vaughn</title>
         <link rel="stylesheet" type="text/css" href="./CSS/portfolio.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
+    
     </head>
     <body>
 
@@ -25,7 +28,7 @@
         <div id="home">
         </div>
         <!--Background image text-->
-        <div class="Background_Text">
+        <div class="Background_Text"> 
             <h1 class="white-text">PORTFOLIO</h1>
             <strong>
                 <p class="center">
@@ -42,7 +45,8 @@
         <div class="row" id="About">
             <!--Left column-->
             <div class="Column_2">
-                <img src="portfimages/ericstandley.jpg" alt="robot art">
+                <img src="./portfimages/profpic.jpg" width="300" height="200" id="record"/>
+                <img src="./portfimages/profile2.jpg" width="300" height="200" id="sleeve" />
             </div>
             <!--Right column-->
             <div class="Column_1">
@@ -64,12 +68,18 @@
         <div class="Row" id="github">
             <!--Left column-->
             <div class="Column_1">
-                <h1>GitHub</h1>
-                <p>
-                    Please take a look at my projects here:
                     <br>
-                    <p class="center"><a href="https://github.com/esievaughn" target="_blank">The Tech Academy Github</a></p>
-                </p>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <a class="btn2" href="https://github.com/esievaughn/Tech-Academy-Projects">GITHUB</a>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <a class="btn2" href="https://www.linkedin.com/in/esievaughn/">LINKEDIN</a>
             </div>
             <!--Right column-->
             <div class="Column_2">
@@ -85,18 +95,31 @@
                         <source src="portfimages/typing.mp4" type="video/mp4">
                     </video>
             </div>
+            
             <!--Contact form, right column-->
             <div class="Column_1 Column_tall">
-                <h1>Contact</h1>
-                <!--This specifies where and how to send the form data; we are leaving it blank-->
-                <form action="https://formspree.io/f/mnqorkgy" method="POST"> <!-- Here we are utilizing a 3rd party service to submit the contact form data, insert your formspree endpoint in the action attribute -->
-                        <input type="text" placeholder="Please enter your name here">
-                        <input type="text" id="Email" name="Email" placeholder="Please enter your email here">
-                        <input type="text" id="Message" name="Message" placeholder="Please write your message here">
-                        <input type="submit" value="SUBMIT">
-                </form>
+                <button class="open-button" onclick="openForm()">GET IN TOUCH</button>
+                <div class="form-popup" id="myForm">
+                    <form action="/action_page.php" class="form-container">
+                      <h1>GET IN TOUCH</h1>
+                  
+                      <label for="email"><b>NAME</b></label>
+                      <input type="text" placeholder="Please enter your name" name="email" required>
+                  
+                      <label for="psw"><b>EMAIL</b></label>
+                      <input type="password" placeholder="Please provide your email" name="psw" required>
+
+                      <label for="psw"><b>MESSAGE</b></label>
+                      <input type="password" placeholder="Your message..." name="msg" required>
+                  
+                      <button type="submit" class="btn">SUBMIT</button>
+                      <button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
+                    </form>
+                  </div>
+                </div>
             </div>
-        </div>
+
+
 
         <!--Footer section-->
         <footer>
@@ -105,10 +128,10 @@
                 <br>
             </p>
         </footer>
+
+        <script src="JS/portfolio.js"></script>
     </body>
 </html>
-
-
 
 
 
