@@ -1,6 +1,11 @@
 /*----------------------------------------
   GENERAL STYLING
 ------------------------------------------*/
+html {
+    scroll-behavior: smooth; /* This ensures that the page scrolling is smooth when the nav bar is clicked */
+}
+  
+
 /* Body */
 body {
     margin: 0%;  /* This ensures our site displays all the way to the edge of the browser screen */
@@ -285,12 +290,12 @@ form {
     jQuery ANIMATION
 ------------------------------------------*/
 
-#record {
+#profpic {
     position: absolute;
     z-index: 0;
 }
 
-#sleeve {
+#profpic2 {
     position: absolute;
     z-index: 0;
     opacity: 80%;
