@@ -1,0 +1,471 @@
+/*----------------------------------------
+  GENERAL STYLING
+------------------------------------------*/
+html {
+    scroll-behavior: smooth; /* This ensures that the page scrolling is smooth when the nav bar is clicked */
+}
+
+* {
+    box-sizing: border-box;
+}
+  
+
+
+/* Body */
+body {
+    margin: 0%;  /* This ensures our site displays all the way to the edge of the browser screen */
+    background-position: top;
+    background-repeat: no-repeat;
+    background-color: ghostwhite;
+    z-index: -1;
+}
+
+/* Heading 1 elements */
+h1 {
+    text-transform: uppercase; /* Capitalizing all h1 headings */
+    font-family: montserrat, sans-serif; /* Sets the font family of all h1 headings */
+    font-size: 30px;
+    text-align: center; /* Centering all h1 elements */
+    margin-top: 3%; /* Adds a small margin above h1 elements */
+    color: #015871; 
+    font-weight: bold;
+    filter: grayscale(75%);
+}
+
+
+/* Styling for portfolio title text */
+.white-text {
+    color: #ffc87c; /* This is used to change the color of the portfolio title text */
+}
+
+/* Paragraph elements */
+p {
+    font-family: "Space Mono";
+    word-spacing: .1px;
+    font-weight: bold;
+    font-size: 14px;
+    padding-left: 20px; /* Adds padding to the left of the paragraph element */
+    padding-right: 20px; /* Adds padding to the right of the paragraph element */
+    color: #015971;
+    z-index: 1;
+    margin-right: auto;
+}
+
+/* Paragraph element hover effect */
+p:hover {
+  transition: transform 1s; /* This makes the transform effect last 1 second */
+	transform: scale(1.01); /* This makes the paragraphs increase slightly in size when hovered over */
+}
+
+/* Center class - this applies to all elements with the class "center" */
+.center {
+  text-align: center; /* This center aligns the text */
+}
+
+
+/* Anchor elements */
+a {
+  color: blue; /* This ensures all links are blue */
+  z-index: 10;
+}
+
+/* Image elements */
+img {
+    border-radius: 8px; /* Gives all images slightly rounded corners */
+    max-width: 100%; /* Ensures all images stay within the width of their container */
+    height: 340px; /* Sets the height of all images */
+    display: block; /* By specifying block display we can ensure our images are able to be centered */
+    margin-left: auto; /* In combination with "margin-right: auto" this centers all images */
+    margin-right: auto;
+}
+
+
+/* The @media rule is used in media queries to apply different styles for different media/types of devices */
+/* On screens 576px and smaller the images will be 100px tall and centered vertically in the column */
+@media screen and (max-width: 576px) {
+    img {
+        height: 100px;
+        margin-top: 150px;
+    }
+}
+
+/* Styling for video */
+video {
+    display: block;
+    margin: auto;
+    height: 300px;
+    width: 400px;
+    border: 10px solid whitesmoke;
+    border-radius: 30px;
+    padding: 70px;
+}
+
+
+/*----------------------------------------
+    NAVBAR STYLING
+------------------------------------------*/
+.Navbar {
+    overflow: hidden; /* This ensures that any content that overflows beyond the boundary of our nav bar is not displayed */
+    background-color: transparent; /* This colors the navbar black */
+    position: fixed; /* This keeps the navbar at the top of the screen as we scroll */
+    top: 0; /* This ensures no space is displayed above the navbar */
+    width: 100%; /* This makes the navbar span the entire width of the page */
+    z-index: 1; /* This ensures other elements don't display over the navbar */
+}
+
+/* Navbar links */
+.Navbar a {
+    float: left; /* This specifies that the text floats on the left on the navbar */
+    display: block; /* This ensures that other text will be displayed on the same line or row, instead of a new line */
+    color: #015971; /* This is the font color for text on our navbar */
+    padding: 14px 16px; /* This adds padding around our text */
+    text-decoration: none; /* This gets rid of the underlines under the text on our navbar */
+    font-family: montserrat, sans-serif; /* This specifies the font family for text on our navbar */
+    font-size: 20px; /* This specifies the font size for text on our navbar */
+    text-align: center; /* This centers the text within its container */
+    position: relative; /* This sets the text relative to its normal positioning, allowing us to use the animation below */
+}
+
+
+/* Screens 576px and smaller will display navbar links equally distributed */
+@media screen and (max-width: 576px) {
+    .Navbar a{
+        width: 25%; /* This makes each link take up 1/4 of the navbar */
+        font-size: 12px;
+    }
+}
+
+/* Navbar hover effects */
+.Navbar a:hover {
+    background-color: #f4f4f4; /* Defines the background color that will display when you hover over the link */
+    color: #015971; /* This defines the font color that will display when navbar a elements are hovered over */
+    font-weight: bold; /* This makes the text on the navbar bold when hovered over */
+}
+
+/* Navbar home button */
+.Navbar a.active { /* This targets the a element on the navbar with the "active" class */
+    background-color: darkgray;
+}
+/*----------------------------------------
+    END NAVBAR
+------------------------------------------*/
+
+.typewriter h1 {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+      typing 3.5s steps(30, end),
+      blink-caret .5s step-end infinite;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange }
+  }
+
+
+
+
+/*----------------------------------------
+    TABLE STYLING
+------------------------------------------*/
+* { /* The asterisk is a universal selector that applies this effect to all elements on the page */
+    box-sizing: border-box; /* This creates a box with a border within which we will place most of our text */
+} 
+
+.Column_1 {
+    float: left;
+    text-align: center;
+    width: 33.33%; /* This ensures the column takes up half of the page width */
+    padding: 10px;
+    padding-top: 1.9%; /* This ensures there is space between the top of the column and our headings */
+    height: 400px; /* This sets the height of the column to 400px -  this may need to be adjusted depending on the text you enter */ /* Sets the background color of the columns with class Column_1 */
+    margin-top: 4em;
+}
+
+/* Screens 576px and smaller will display a scroll bar if the text overflows the column height */
+@media screen and (max-width: 576px) {
+    .Column_1 {
+        overflow: auto;
+    }
+}
+
+
+.Column_2 {
+    float: left;
+    width: 33.33%;
+    padding: 10px;
+    padding-top: 1.9%;
+    height: 400px;
+    margin-top: 2em;
+}
+
+@media screen and (max-width: 576px) {
+  .Column_2 {
+      overflow: auto;
+  }
+}
+
+.Column_3 {
+  float: left;
+  width: 33.33%;
+  padding: 1em;
+  padding-top: 1.9%;
+  height:400px;
+  margin-top: 4em;
+}
+
+.Column_3 ul li {
+  display: inline-block;
+  border-radius:10px;
+  margin-bottom: 2em; 
+  margin-top: 2em;
+}
+
+@media screen and (max-width: 576px) {
+  .Column_3 {
+      overflow: auto;
+  }
+}
+
+
+/* This class is applied to the columns in the final row, overriding the height and padding to provide more room for the contact form  while keeping the rest of the formatting from Column_1 or Column_2 */
+.Column_tall {
+    padding-top: 3.5%;
+    height: 450px;
+}
+
+/* This inserts something after the content of selected elements (in this case the elements with class "Row") */
+.Row:after {
+	content: ""; /* By leaving this blank, we are allowing the footer (covered lower down) to be displayed - removing it makes the footer overwrite a column */
+	display: table; /* The display property specifies the type of display behavior; the table value tells the browser to treat the element as a table */
+	clear: both; /* This clears any other elements from floating on the left or the right of an element */
+}
+/*----------------------------------------
+    END TABLE STYLING
+------------------------------------------*/
+
+
+  /*----------------------------------------
+    BUTTON STYLING 
+------------------------------------------*/
+.btn2 {
+    padding: 1em 2em;
+    border: 0.125em solid #e6916f;
+    box-shadow: 0.5em 0.5em 0 -0.125em #fff, 0.5em 0.5em #d3ad58;
+    overflow: hidden;
+    position: relative;
+    color: #015871;
+    background-color: #f5f5f5 ;
+    font: 18px "Space Mono";
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.3s;
+    margin: 6em;
+    margin-top: 10px;
+    font-weight: bold;
+    z-index: 1;
+    border-radius: 8px;
+
+}
+
+.btn2:hover {
+    color: #fff;
+    background-color: #015871;
+    box-shadow: 1em 1em 0 -0.125em #fff, 1em 1em #d3ad58;
+}
+
+
+  /*----------------------------------------
+    END BUTTON STYLING 
+------------------------------------------*/
+
+
+
+/*----------------------------------------
+    FOOTER
+------------------------------------------*/
+footer {
+    clear: both;
+    position: relative;
+    height: 50px;
+    margin-top: -50px;
+    text-align: center;
+    padding-top: 5em;
+    padding-bottom: .5em;
+    background: transparent;
+}
+
+footer p{
+color: #015871;
+font-weight: bold;
+}
+
+ /*----------------------------------------
+    END FOOTER 
+------------------------------------------*/
+
+  /*----------------------------------------
+    POPUP CONTACT FORM STYLING 
+------------------------------------------*/
+#contact {
+  padding: 1em 3em;
+  border: 0.125em solid #e6916f;
+  box-shadow: 0.5em 0.5em 0 -0.125em #fff, 0.5em 0.5em #d3ad58;
+  overflow: hidden;
+  position: relative;
+  color: #015871;
+  background-color: #f5f5f5 ;
+  font: 18px "Space Mono";
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.3s;
+  margin-right: 6em;
+  margin-left: 6em;
+  font-weight: bold;
+  z-index: 1;
+  border-radius: 8px;
+}
+
+#contact:hover {
+    color: #fff;
+    box-shadow: 1em 1em 0 -0.125em #fff, 1em 1em #d3ad58;
+}
+  
+  #contact:hover { background: #015871; }
+  #contact:active { background: #015871; }
+  
+  #contactForm { 
+    display: none;
+  
+    border: 6px solid salmon; 
+    padding: 2em;
+    width: 400px;
+    text-align: center;
+    background: #fff;
+    position: fixed;
+    top:50%;
+    left:50%;
+    z-index:1;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%)
+    
+  }
+  
+  input, textarea { 
+    margin: .8em auto;
+    font-family: inherit; 
+    text-transform: inherit; 
+    font-size: inherit;
+    
+    display: block; 
+    width: 280px; 
+    padding: .4em;
+  }
+  textarea { height: 80px; resize: none; }
+  
+  .formBtn { 
+    width: 140px;
+    display: inline-block;
+    background: teal;
+    color: #fff;
+    font-weight: 100;
+    font-size: 1.2em;
+    border: none;
+    height: 30px;
+    z-index: 1;
+  }
+
+  /*----------------------------------------
+    END CONTACT FORM STYLING 
+------------------------------------------*/
+
+
+  /*----------------------------------------
+    SVG WAVES
+------------------------------------------*/
+
+  @keyframes move_wave {
+    0% {
+        transform: translateX(0) translateZ(0) scaleY(1)
+    }
+    50% {
+        transform: translateX(-25%) translateZ(0) scaleY(0.55)
+    }
+    100% {
+        transform: translateX(-50%) translateZ(0) scaleY(1)
+    }
+}
+.waveWrapper {
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+}
+.waveWrapperInner {
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+    height: 100%;
+    bottom: -1px;
+    background-image: linear-gradient(to top, ghostwhite 20%, whitesmoke 80%);
+}
+.bgTop {
+    z-index: -5;
+    opacity: 0.5;
+}
+.bgMiddle {
+    z-index: -10;
+    opacity: 0.75;
+}
+.bgBottom {
+    z-index: -15;
+}
+.wave {
+    position: absolute;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    background-repeat: repeat no-repeat;
+    background-position: 0 bottom;
+    transform-origin: center bottom;
+}
+.waveTop {
+    background-size: 50% 100px;
+}
+.waveAnimation .waveTop {
+  animation: move-wave 3s;
+   -webkit-animation: move-wave 3s;
+   -webkit-animation-delay: 1s;
+   animation-delay: 1s;
+}
+.waveMiddle {
+    background-size: 50% 120px;
+}
+.waveAnimation .waveMiddle {
+    animation: move_wave 10s linear infinite;
+}
+.waveBottom {
+    background-size: 50% 100px;
+}
+.waveAnimation .waveBottom {
+    animation: move_wave 15s linear infinite;
+}
+
+
+  /*----------------------------------------
+    END SVG WAVES
+------------------------------------------*/
