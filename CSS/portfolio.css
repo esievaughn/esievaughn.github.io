@@ -211,16 +211,12 @@ video {
     height: 400px;
     margin-top: 2em;
     border: 3px solid #d3ad58;
-    box-shadow: 5px 10px #e6916f;
+    box-shadow: 15px 20px 2vw #e6916f;
     border-radius: 8px;
     background:  white;
 }
 
-@media screen and (max-width: 576px) {
-  .Column_2 {
-      overflow: auto;
-  }
-}
+
 
 .Column_3 {
     display: flex;
