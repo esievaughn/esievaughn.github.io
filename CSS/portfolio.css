@@ -188,6 +188,7 @@ video {
     float: right;
     text-align: center;
     width: 30%; 
+    max-width: 100%;
     padding: 10px;
     padding-top: 1.9%; /* This ensures there is space between the top of the column and our headings */
     height: 400px; /* This sets the height of the column to 400px -  this may need to be adjusted depending on the text you enter */ /* Sets the background color of the columns with class Column_1 */
@@ -206,6 +207,7 @@ video {
     display: block;
     float: left;
     width: 50%;
+    max-width: 100%;
     padding: 10px;
     padding-top: 1.9%;
     height: 400px;
@@ -226,6 +228,7 @@ video {
     display: flex;
     float: left;
     width: 20%;
+    max-width: 100%;
     padding: 0em;
     padding-top: 1%;
     height:400px;
@@ -241,11 +244,11 @@ video {
   max-width: 100%;
 }
 
-@media screen and (max-width: 576px) {
-  .Column_3 {
-    overflow: auto;
+@media screen and (max-width: 300px) {
+    .Column_1,.Column_2,.Column_3 {
+      display: block;
+    }
   }
-}
 
 
 /* This class is applied to the columns in the final row, overriding the height and padding to provide more room for the contact form  while keeping the rest of the formatting from Column_1 or Column_2 */
