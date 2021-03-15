@@ -213,6 +213,7 @@ video {
     border: 3px solid #d3ad58;
     box-shadow: 5px 10px #e6916f;
     border-radius: 8px;
+    background:  white;
 }
 
 @media screen and (max-width: 576px) {
