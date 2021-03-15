@@ -184,9 +184,10 @@ video {
 } 
 
 .Column_1 {
-    float: left;
+    display: block;
+    float: right;
     text-align: center;
-    width: 33.33%; /* This ensures the column takes up half of the page width */
+    width: 30%; 
     padding: 10px;
     padding-top: 1.9%; /* This ensures there is space between the top of the column and our headings */
     height: 400px; /* This sets the height of the column to 400px -  this may need to be adjusted depending on the text you enter */ /* Sets the background color of the columns with class Column_1 */
@@ -202,12 +203,16 @@ video {
 
 
 .Column_2 {
+    display: block;
     float: left;
-    width: 33.33%;
+    width: 50%;
     padding: 10px;
     padding-top: 1.9%;
     height: 400px;
     margin-top: 2em;
+    border: 3px solid #d3ad58;
+    box-shadow: 5px 10px #e6916f;
+    border-radius: 8px;
 }
 
 @media screen and (max-width: 576px) {
@@ -217,24 +222,27 @@ video {
 }
 
 .Column_3 {
-  float: left;
-  width: 33.33%;
-  padding: 1em;
-  padding-top: 1.9%;
-  height:400px;
-  margin-top: 4em;
+    display: flex;
+    float: left;
+    width: 20%;
+    padding: 0em;
+    padding-top: 1%;
+    height:400px;
+    margin-top: 4em;
+    margin-right: auto;
 }
 
 .Column_3 ul li {
-  display: inline-block;
+  display: flex;
   border-radius:10px;
   margin-bottom: 2em; 
   margin-top: 2em;
+  max-width: 100%;
 }
 
 @media screen and (max-width: 576px) {
   .Column_3 {
-      overflow: auto;
+    overflow: auto;
   }
 }
 
@@ -271,8 +279,8 @@ video {
     text-decoration: none;
     text-transform: uppercase;
     transition: 0.3s;
-    margin: 6em;
-    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
     font-weight: bold;
     z-index: 1;
     border-radius: 8px;
@@ -319,7 +327,7 @@ font-weight: bold;
     POPUP CONTACT FORM STYLING 
 ------------------------------------------*/
 #contact {
-  padding: 1em 3em;
+  padding: 1em 2em;
   border: 0.125em solid #e6916f;
   box-shadow: 0.5em 0.5em 0 -0.125em #fff, 0.5em 0.5em #d3ad58;
   overflow: hidden;
@@ -330,8 +338,8 @@ font-weight: bold;
   text-decoration: none;
   text-transform: uppercase;
   transition: 0.3s;
-  margin-right: 6em;
-  margin-left: 6em;
+  margin-right: auto;
+  margin-left: auto;
   font-weight: bold;
   z-index: 1;
   border-radius: 8px;
