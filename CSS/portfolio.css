@@ -1,3 +1,4 @@
+  
 /*----------------------------------------
   GENERAL STYLING
 ------------------------------------------*/
@@ -89,17 +90,6 @@ img {
     }
 }
 
-/* Styling for video */
-video {
-    display: block;
-    margin: auto;
-    height: 300px;
-    width: 400px;
-    border: 10px solid whitesmoke;
-    border-radius: 30px;
-    padding: 70px;
-}
-
 
 /*----------------------------------------
     NAVBAR STYLING
@@ -150,6 +140,11 @@ video {
     END NAVBAR
 ------------------------------------------*/
 
+
+/*----------------------------------------
+    TYPEWRITER EFFECT
+------------------------------------------*/
+
 .typewriter h1 {
     overflow: hidden; /* Ensures the content is not revealed until the animation */
     border-right: .15em solid orange; /* The typwriter cursor */
@@ -173,88 +168,61 @@ video {
     50% { border-color: orange }
   }
 
-
+/*----------------------------------------
+    END TYPEWRITER EFFECT
+------------------------------------------*/
 
 
 /*----------------------------------------
     TABLE STYLING
 ------------------------------------------*/
-* { /* The asterisk is a universal selector that applies this effect to all elements on the page */
-    box-sizing: border-box; /* This creates a box with a border within which we will place most of our text */
-} 
 
-.Column_1 {
-    display: flex;
-    float: right;
-    text-align: center;
-    width: 30%; 
-    max-width: 100%;
-    padding: 10px;
-    padding-top: 1.9%; /* This ensures there is space between the top of the column and our headings */
-    height: 400px; /* This sets the height of the column to 400px -  this may need to be adjusted depending on the text you enter */ /* Sets the background color of the columns with class Column_1 */
-    margin-top: 4em;
-}
-
-/* Screens 576px and smaller will display a scroll bar if the text overflows the column height */
-@media screen and (max-width: 576px) {
-    .Column_1 {
-        overflow: auto;
-    }
-}
-
-
-.Column_2 {
-    display: block;
-    float: left;
-    width: 50%;
-    max-width: 100%;
-    padding: 10px;
-    padding-top: 1.9%;
-    height: 400px;
-    margin-top: 2em;
-}
-
-.border-container {
-    padding: 1.5vw;
-    border: 3px solid #d3ad58;
-    box-shadow: 15px 20px 2vw #e6916f;
-    background: white;
-    border-radius: 8px;
-}
-
-
-
-.Column_3 {
-    display: flex;
-    float: left;
-    width: 20%;
-    max-width: 100%;
-    padding: 0em;
-    padding-top: 1%;
-    height:400px;
-    margin-top: 4em;
-    margin-right: auto;
-}
-
-.Column_3 ul li {
-  display: flex;
-  border-radius:10px;
-  margin-bottom: 2em; 
-  margin-top: 2em;
+.wrapper {
+  padding: 5px;
   max-width: 100%;
+  width: 100%;
+  margin: 20px auto;
 }
 
-@media screen and (max-width: 300px) {
-    .Column_1,.Column_2,.Column_3 {
-      display: block;
+.columns {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin: 5px 0;
+}
+
+.column {
+  flex: 1;
+  margin: 2px;
+  padding: 10px;
+  &:first-child {
+    margin-left: 0;
+  }
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+
+@media screen and (max-width: 980px) {
+  .columns .column {
+    margin-bottom: 5px;
+    flex-basis: 40%;
+    &:nth-last-child(2) {
+      margin-right: 0;
+    }
+    &:last-child {
+      flex-basis: 100%;
+      margin: 0;
     }
   }
+}
 
-
-/* This class is applied to the columns in the final row, overriding the height and padding to provide more room for the contact form  while keeping the rest of the formatting from Column_1 or Column_2 */
-.Column_tall {
-    padding-top: 3.5%;
-    height: 450px;
+@media screen and (max-width: 680px) {
+  .columns .column {
+    flex-basis: 100%;
+    margin: 0 0 5px 0;
+  }
 }
 
 /* This inserts something after the content of selected elements (in this case the elements with class "Row") */
@@ -263,20 +231,54 @@ video {
 	display: table; /* The display property specifies the type of display behavior; the table value tells the browser to treat the element as a table */
 	clear: both; /* This clears any other elements from floating on the left or the right of an element */
 }
+
 /*----------------------------------------
     END TABLE STYLING
+------------------------------------------*/
+
+/*----------------------------------------
+    ABOUT STYLING
+------------------------------------------*/
+.border-container {
+    padding: 1.5vw;
+    border: 3px solid #d3ad58;
+    box-shadow: 15px 20px 2vw #e6916f;
+    background: white;
+    border-radius: 8px;
+    position: relative;
+}
+/*----------------------------------------
+    END ABOUT STYLING
 ------------------------------------------*/
 
 
   /*----------------------------------------
     BUTTON STYLING 
 ------------------------------------------*/
+.ul {
+    z-index: 1;
+    position: relative;
+    display: block;
+}
+
+ul {
+    list-style-type: none;
+}
+
+
+.btn2 {
+    display: inline-flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1em;
+    margin-top: 2em;
+    z-index: 1;
+}
+
 .btn2 {
     padding: 1em 2em;
     border: 0.125em solid #e6916f;
     box-shadow: 0.5em 0.5em 0 -0.125em #fff, 0.5em 0.5em #d3ad58;
-    overflow: hidden;
-    position: relative;
     color: #015871;
     background-color: #f5f5f5 ;
     font: 1.3vw "Space Mono";
@@ -286,8 +288,8 @@ video {
     margin-left: auto;
     margin-right: auto;
     font-weight: bold;
-    z-index: 1;
     border-radius: 8px;
+    z-index: 1;
 
 }
 
@@ -301,7 +303,6 @@ video {
   /*----------------------------------------
     END BUTTON STYLING 
 ------------------------------------------*/
-
 
 
 /*----------------------------------------
@@ -331,60 +332,58 @@ font-weight: bold;
     POPUP CONTACT FORM STYLING 
 ------------------------------------------*/
 #contact {
-  padding: 1em 2em;
-  border: 0.125em solid #e6916f;
-  box-shadow: 0.5em 0.5em 0 -0.125em #fff, 0.5em 0.5em #d3ad58;
-  overflow: hidden;
-  position: relative;
-  color: #015871;
-  background-color: #f5f5f5 ;
-  font: 1.3vw "Space Mono";
-  text-decoration: none;
-  text-transform: uppercase;
-  transition: 0.3s;
-  margin-right: auto;
-  margin-left: auto;
-  font-weight: bold;
-  z-index: 1;
-  border-radius: 8px;
+    padding: 1em 2em;
+    margin-top: 2em;
+    border: 0.125em solid #e6916f;
+    box-shadow: 0.5em 0.5em 0 -0.125em #fff, 0.5em 0.5em #d3ad58;
+    position: absolute;
+    color: #015871;
+    background-color: #f5f5f5 ;
+    font: 1.3vw "Space Mono";
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.3s;
+    font-weight: bold;
+    border-radius: 8px;
+    z-index: 1;
 }
 #contact:hover {
-  color: #fff;
-  box-shadow: 1em 1em 0 -0.125em #fff, 1em 1em #d3ad58;
+    color: #fff;
+    box-shadow: 1em 1em 0 -0.125em #fff, 1em 1em #d3ad58;
+    background: #015871; 
 }
-  #contact:hover { background: #015871; }
-  #contact:active { background: #015871; }
+#contact:active { background: #015871; }
   
-  #contactForm { 
+#contactForm { 
     display: none;
     border: 6px solid #e6916f; 
     padding: 2em;
-    width: 400px;
+    max-width: 50%;
     text-align: center;
     background: #fff;
-    position: fixed;
-    top:50%;
-    left:50%;
-    z-index:1;
-    transform: translate(-50%,-50%);
-    -webkit-transform: translate(-50%,-50%)
-    
-  }
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 10;
+    transform: translate(-50%, -50%); 
+    -webkit-transform: translate(-50%,-50%);
+}
+
   
-  input, textarea { 
+input, textarea { 
     margin: .8em auto;
     font-family: inherit; 
     text-transform: inherit; 
     font-size: inherit;
     
     display: block; 
-    width: 280px; 
+    width: 100%; 
     padding: .4em;
   }
-  textarea { height: 80px; resize: none; }
+textarea { height: 80px; resize: none; }
   
-  .formBtn { 
-    width: 140px;
+.formBtn { 
+    width: 100%;
     display: inline-block;
     background: #d3ad58;
     color: #fff;
@@ -393,7 +392,6 @@ font-weight: bold;
     padding-bottom: 1.5em;
     border: none;
     height: 30px;
-    z-index: 1;
   }
 
   /*----------------------------------------
@@ -460,7 +458,7 @@ font-weight: bold;
   animation: move-wave 3s;
    -webkit-animation: move-wave 3s;
    -webkit-animation-delay: 1s;
-   animation-delay: 1s;
+   animation-delay: 1s; 
 }
 .waveMiddle {
     background-size: 50% 120px;
@@ -477,3 +475,9 @@ font-weight: bold;
   /*----------------------------------------
     END SVG WAVES
 ------------------------------------------*/
+
+
+
+
+
+
