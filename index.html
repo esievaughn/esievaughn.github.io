@@ -4,9 +4,10 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width,initial-scale=1" />
         <title>Esie Vaughn</title>
-        <link rel="stylesheet" type="text/css" href="./CSS/portfolio.css">
+        
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="./CSS/portfolio.css">
     </head>
     <body>
         <!--Navbar--->
@@ -18,33 +19,30 @@
         <br>
         <br>
 
-        <!--About secton-->
-        <div class="row" id="home">
-            <!--Left column-->
-                <div class="Column_1">
-                    <img src="./portfimages/personalwebdesign.png" alt="profile image">
-                </div>
-            <!--Center column-->
-                <div class="Column_3">
-                    <ul>
-                        <li><a class="btn2" href="https://github.com/esievaughn/Tech-Academy-Projects">GITHUB</a></li>
-                        <li><a class="btn2" href="https://www.linkedin.com/in/esievaughn/">LINKEDIN</a></li>
-                        <li><div id="contact">Contact</div></li>
-                    </ul>
+
+        <div class="wrapper"> 
+            <section class="columns">
+                <div class="column">
+                    <div class="ul">
+                        <ul>
+                            <li><a class="btn2" href="https://github.com/esievaughn/Tech-Academy-Projects">GITHUB</a></li>
+                            <li><a class="btn2" href="https://www.linkedin.com/in/esievaughn/">LINKEDIN</a></li>
+                            <li><div id="contact">Contact</div></li>
+                        </ul>
+                    </div>
                     <div id="contactForm">
-                    <h1>LET'S CONNECT!</h1>
-                    <form action="#">
-                        <input placeholder="Name" type="text" required />
-                        <input placeholder="Email" type="email" required />
-                        <input placeholder="Subject" type="text" required />
-                        <textarea placeholder="Comment"></textarea>
-                        <input class="formBtn" type="submit" />
-                        <input class="formBtn" type="reset" />
-                    </form>
-                </div>   
-            </div>
-                <!--Right column-->
-                <div class="Column_2" id="about">
+                        <h1>LET'S CONNECT!</h1>
+                            <form action="#">
+                                <input placeholder="Name" type="text" required />
+                                <input placeholder="Email" type="email" required />
+                                <input placeholder="Subject" type="text" required />
+                                <textarea placeholder="Comment"></textarea>
+                                <input class="formBtn" type="submit" />
+                                <input class="formBtn" type="reset" />
+                            </form>
+                    </div> 
+                </div>  
+                <div class="column">
                     <div class="border-container">
                         <div class="typewriter">
                             <h1>Welcome, I'm Esie!</h1>
@@ -66,6 +64,14 @@
                             </p>
                     </div>
                 </div>
+                <div class="column">
+                    <img src="./portfimages/personalwebdesign.png" alt="profile image">
+                </div>
+            </section>
+        </div>
+
+        
+
 
         <!--SVG WAVES section-->
         <div class="Row">
@@ -79,13 +85,18 @@
                 <div class="waveWrapperInner bgBottom">
                 <div class="wave waveBottom" style="background-image: url('http://front-end-noobs.com/jecko/img/wave-bot.png')"></div>
                 </div>
-            </div>
+        </div>
+
+
+
           
 
         <!--Footer section-->
-        <footer>
-                <p class="center">&copy|ESIE VAUGHN|</p>
-        </footer>
+        <div class="Row">
+            <footer>
+                    <p>&copy|ESIE VAUGHN|</p>
+            </footer>
+        </div>
 
         <script src="JS/portfolio.js"></script>
     </body>
