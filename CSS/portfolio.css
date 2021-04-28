@@ -16,9 +16,8 @@ html {
 body {
     margin: 0%;  /* This ensures our site displays all the way to the edge of the browser screen */
     background-position: top;
-    background-repeat: no-repeat;
-    background-color: ghostwhite;
-    z-index: -1;
+    background-color:  #F7EFAD;
+    background-image: url("../portfimages/otis-redding.png");
 }
 
 /* Heading 1 elements */
@@ -34,33 +33,23 @@ h1 {
 }
 
 
-/* Styling for portfolio title text */
-.white-text {
-    color: #ffc87c; /* This is used to change the color of the portfolio title text */
-}
-
 /* Paragraph elements */
 p {
     font-family: "Space Mono";
-    word-spacing: .1px;
     font-weight: bold;
     font-size: 1vw;
     padding-left: 20px; /* Adds padding to the left of the paragraph element */
     padding-right: 20px; /* Adds padding to the right of the paragraph element */
-    color: #015971;
+    color: #654321;
     z-index: 1;
     margin-right: auto;
+    margin-left: auto;
 }
 
 /* Paragraph element hover effect */
 p:hover {
   transition: transform 1s; /* This makes the transform effect last 1 second */
 	transform: scale(1.01); /* This makes the paragraphs increase slightly in size when hovered over */
-}
-
-/* Center class - this applies to all elements with the class "center" */
-.center {
-  text-align: center; /* This center aligns the text */
 }
 
 
@@ -72,13 +61,16 @@ a {
 
 /* Image elements */
 img {
-    border-radius: 8px; /* Gives all images slightly rounded corners */
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; /* Gives all images slightly rounded corners */
     max-width: 100%; /* Ensures all images stay within the width of their container */
     height: 340px; /* Sets the height of all images */
     display: block; /* By specifying block display we can ensure our images are able to be centered */
     margin-left: auto; /* In combination with "margin-right: auto" this centers all images */
     margin-right: auto;
+    box-shadow: 15px 20px 2vw #586A65;
 }
+
+
 
 
 /* The @media rule is used in media queries to apply different styles for different media/types of devices */
@@ -107,7 +99,7 @@ img {
 .Navbar a {
     float: left; /* This specifies that the text floats on the left on the navbar */
     display: block; /* This ensures that other text will be displayed on the same line or row, instead of a new line */
-    color: #015971; /* This is the font color for text on our navbar */
+    color: #254B4A; /* This is the font color for text on our navbar */
     padding: 14px 16px; /* This adds padding around our text */
     text-decoration: none; /* This gets rid of the underlines under the text on our navbar */
     font-family: montserrat, sans-serif; /* This specifies the font family for text on our navbar */
@@ -127,8 +119,8 @@ img {
 
 /* Navbar hover effects */
 .Navbar a:hover {
-    background-color: #f4f4f4; /* Defines the background color that will display when you hover over the link */
-    color: #015971; /* This defines the font color that will display when navbar a elements are hovered over */
+    background-color: transparent; /* Defines the background color that will display when you hover over the link */
+    color: #CE6E3B; /* This defines the font color that will display when navbar a elements are hovered over */
     font-weight: bold; /* This makes the text on the navbar bold when hovered over */
 }
 
@@ -147,7 +139,7 @@ img {
 
 .typewriter h1 {
     overflow: hidden; /* Ensures the content is not revealed until the animation */
-    border-right: .15em solid orange; /* The typwriter cursor */
+    border-right: .15em solid #CE6E3B; /* The typwriter cursor */
     white-space: nowrap; /* Keeps the content on a single line */
     margin: 0 auto; /* Gives that scrolling effect as the typing happens */
     letter-spacing: .15em; /* Adjust as needed */
@@ -241,16 +233,14 @@ img {
 ------------------------------------------*/
 .border-container {
     padding: 1.5vw;
-    border: 3px solid #d3ad58;
-    box-shadow: 15px 20px 2vw #e6916f;
-    background: white;
-    border-radius: 8px;
+    box-shadow: 15px 20px 2vw #586A65;
+    background-image: url("../portfimages/2.png");
+    border-radius: 100px 300px 50px;
     position: relative;
 }
 /*----------------------------------------
     END ABOUT STYLING
 ------------------------------------------*/
-
 
   /*----------------------------------------
     BUTTON STYLING 
@@ -277,26 +267,25 @@ ul {
 
 .btn2 {
     padding: 1em 2em;
-    border: 0.125em solid #e6916f;
-    box-shadow: 0.5em 0.5em 0 -0.125em #fff, 0.5em 0.5em #d3ad58;
+    background-image: url("../portfimages/2.png");
+    box-shadow:  15px 20px 2vw #586A65;
     color: #015871;
-    background-color: #f5f5f5 ;
-    font: 1.3vw "Space Mono";
+    font: 1.5vw "Space Mono";
     text-decoration: none;
     text-transform: uppercase;
     transition: 0.3s;
     margin-left: auto;
     margin-right: auto;
     font-weight: bold;
-    border-radius: 8px;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
     z-index: 1;
 
 }
 
 .btn2:hover {
     color: #fff;
-    background-color: #015871;
-    box-shadow: 1em 1em 0 -0.125em #fff, 1em 1em #d3ad58;
+    background-color: #254B4A;
+    box-shadow: 1em 1em 0 -0.125em seashell;
 }
 
 
@@ -334,33 +323,32 @@ font-weight: bold;
 #contact {
     padding: 1em 2em;
     margin-top: 2em;
-    border: 0.125em solid #e6916f;
-    box-shadow: 0.5em 0.5em 0 -0.125em #fff, 0.5em 0.5em #d3ad58;
+    box-shadow:  15px 20px 2vw #586A65;
     position: absolute;
     color: #015871;
-    background-color: #f5f5f5 ;
-    font: 1.3vw "Space Mono";
+    background-image: url("../portfimages/2.png");
+    font: 1.5vw "Space Mono";
     text-decoration: none;
     text-transform: uppercase;
     transition: 0.3s;
     font-weight: bold;
-    border-radius: 8px;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
     z-index: 1;
 }
 #contact:hover {
     color: #fff;
-    box-shadow: 1em 1em 0 -0.125em #fff, 1em 1em #d3ad58;
-    background: #015871; 
+    box-shadow: 1em 1em 0 -0.125em seashell;
 }
-#contact:active { background: #015871; }
+#contact:active { background: seashell; }
   
 #contactForm { 
     display: none;
-    border: 6px solid #e6916f; 
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    box-shadow: 15px 20px 2vw #586A65;
     padding: 2em;
     max-width: 50%;
     text-align: center;
-    background: #fff;
+    background: #d2b48c;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -375,7 +363,6 @@ input, textarea {
     font-family: inherit; 
     text-transform: inherit; 
     font-size: inherit;
-    
     display: block; 
     width: 100%; 
     padding: .4em;
@@ -386,6 +373,8 @@ textarea { height: 80px; resize: none; }
     width: 100%;
     display: inline-block;
     background: #d3ad58;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; 
+    box-shadow: 15px 20px 2vw #586A65;
     color: #fff;
     font-weight: bold;
     font-size: 1.2em;
@@ -394,87 +383,16 @@ textarea { height: 80px; resize: none; }
     height: 30px;
   }
 
+  .formBtn:hover {
+    color: #fff;
+    box-shadow: 1em 1em 0 -0.125em seashell;
+}
+
   /*----------------------------------------
     END CONTACT FORM STYLING 
 ------------------------------------------*/
 
 
-  /*----------------------------------------
-    SVG WAVES
-------------------------------------------*/
-
-  @keyframes move_wave {
-    0% {
-        transform: translateX(0) translateZ(0) scaleY(1)
-    }
-    50% {
-        transform: translateX(-25%) translateZ(0) scaleY(0.55)
-    }
-    100% {
-        transform: translateX(-50%) translateZ(0) scaleY(1)
-    }
-}
-.waveWrapper {
-    overflow: hidden;
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    top: 0;
-    margin: auto;
-}
-.waveWrapperInner {
-    position: absolute;
-    width: 100%;
-    overflow: hidden;
-    height: 100%;
-    bottom: -1px;
-    background-image: linear-gradient(to top, ghostwhite 20%, whitesmoke 80%);
-}
-.bgTop {
-    z-index: -5;
-    opacity: 0.5;
-}
-.bgMiddle {
-    z-index: -10;
-    opacity: 0.75;
-}
-.bgBottom {
-    z-index: -15;
-}
-.wave {
-    position: absolute;
-    left: 0;
-    width: 200%;
-    height: 100%;
-    background-repeat: repeat no-repeat;
-    background-position: 0 bottom;
-    transform-origin: center bottom;
-}
-.waveTop {
-    background-size: 50% 100px;
-}
-.waveAnimation .waveTop {
-  animation: move-wave 3s;
-   -webkit-animation: move-wave 3s;
-   -webkit-animation-delay: 1s;
-   animation-delay: 1s; 
-}
-.waveMiddle {
-    background-size: 50% 120px;
-}
-.waveAnimation .waveMiddle {
-    animation: move_wave 10s linear infinite;
-}
-.waveBottom {
-    background-size: 50% 100px;
-}
-.waveAnimation .waveBottom {
-    animation: move_wave 15s linear infinite;
-}
-  /*----------------------------------------
-    END SVG WAVES
-------------------------------------------*/
 
 
 
