@@ -1,0 +1,401 @@
+  
+/*----------------------------------------
+  GENERAL STYLING
+------------------------------------------*/
+html {
+    scroll-behavior: smooth; /* This ensures that the page scrolling is smooth when the nav bar is clicked */
+}
+
+* {
+    box-sizing: border-box;
+}
+  
+
+
+/* Body */
+body {
+    margin: 0%;  /* This ensures our site displays all the way to the edge of the browser screen */
+    background-position: top;
+    background-color:  #F7EFAD;
+    background-image: url("../portfimages/otis-redding.png");
+}
+
+/* Heading 1 elements */
+h1 {
+    text-transform: uppercase; /* Capitalizing all h1 headings */
+    font-family: montserrat, sans-serif; /* Sets the font family of all h1 headings */
+    font-size: 2vw;
+    text-align: center; /* Centering all h1 elements */
+    margin-top: 3%; /* Adds a small margin above h1 elements */
+    color: #015871; 
+    font-weight: bold;
+    filter: grayscale(75%);
+}
+
+
+/* Paragraph elements */
+p {
+    font-family: "Space Mono";
+    font-weight: bold;
+    font-size: 1vw;
+    padding-left: 20px; /* Adds padding to the left of the paragraph element */
+    padding-right: 20px; /* Adds padding to the right of the paragraph element */
+    color: #654321;
+    z-index: 1;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* Paragraph element hover effect */
+p:hover {
+  transition: transform 1s; /* This makes the transform effect last 1 second */
+	transform: scale(1.01); /* This makes the paragraphs increase slightly in size when hovered over */
+}
+
+
+/* Anchor elements */
+a {
+  color: blue; /* This ensures all links are blue */
+  z-index: 10;
+}
+
+/* Image elements */
+img {
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; /* Gives all images slightly rounded corners */
+    max-width: 100%; /* Ensures all images stay within the width of their container */
+    height: 340px; /* Sets the height of all images */
+    display: block; /* By specifying block display we can ensure our images are able to be centered */
+    margin-left: auto; /* In combination with "margin-right: auto" this centers all images */
+    margin-right: auto;
+    box-shadow: 15px 20px 2vw #586A65;
+}
+
+
+
+
+/* The @media rule is used in media queries to apply different styles for different media/types of devices */
+/* On screens 576px and smaller the images will be 100px tall and centered vertically in the column */
+@media screen and (max-width: 576px) {
+    img {
+        height: 100px;
+        margin-top: 150px;
+    }
+}
+
+
+/*----------------------------------------
+    NAVBAR STYLING
+------------------------------------------*/
+.Navbar {
+    overflow: hidden; /* This ensures that any content that overflows beyond the boundary of our nav bar is not displayed */
+    background-color: transparent; /* This colors the navbar black */
+    position: fixed; /* This keeps the navbar at the top of the screen as we scroll */
+    top: 0; /* This ensures no space is displayed above the navbar */
+    width: 100%; /* This makes the navbar span the entire width of the page */
+    z-index: 1; /* This ensures other elements don't display over the navbar */
+}
+
+/* Navbar links */
+.Navbar a {
+    float: left; /* This specifies that the text floats on the left on the navbar */
+    display: block; /* This ensures that other text will be displayed on the same line or row, instead of a new line */
+    color: #254B4A; /* This is the font color for text on our navbar */
+    padding: 14px 16px; /* This adds padding around our text */
+    text-decoration: none; /* This gets rid of the underlines under the text on our navbar */
+    font-family: montserrat, sans-serif; /* This specifies the font family for text on our navbar */
+    font-size: 20px; /* This specifies the font size for text on our navbar */
+    text-align: center; /* This centers the text within its container */
+    position: relative; /* This sets the text relative to its normal positioning, allowing us to use the animation below */
+}
+
+
+/* Screens 576px and smaller will display navbar links equally distributed */
+@media screen and (max-width: 576px) {
+    .Navbar a{
+        width: 25%; /* This makes each link take up 1/4 of the navbar */
+        font-size: 12px;
+    }
+}
+
+/* Navbar hover effects */
+.Navbar a:hover {
+    background-color: transparent; /* Defines the background color that will display when you hover over the link */
+    color: #CE6E3B; /* This defines the font color that will display when navbar a elements are hovered over */
+    font-weight: bold; /* This makes the text on the navbar bold when hovered over */
+}
+
+/* Navbar home button */
+.Navbar a.active { /* This targets the a element on the navbar with the "active" class */
+    background-color: darkgray;
+}
+/*----------------------------------------
+    END NAVBAR
+------------------------------------------*/
+
+
+/*----------------------------------------
+    TYPEWRITER EFFECT
+------------------------------------------*/
+
+.typewriter h1 {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid #CE6E3B; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+      typing 3.5s steps(30, end),
+      blink-caret .5s step-end infinite;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange }
+  }
+
+/*----------------------------------------
+    END TYPEWRITER EFFECT
+------------------------------------------*/
+
+
+/*----------------------------------------
+    TABLE STYLING
+------------------------------------------*/
+
+.wrapper {
+  padding: 5px;
+  max-width: 100%;
+  width: 100%;
+  margin: 20px auto;
+}
+
+.columns {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin: 5px 0;
+}
+
+.column {
+  flex: 1;
+  margin: 2px;
+  padding: 10px;
+  &:first-child {
+    margin-left: 0;
+  }
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+
+@media screen and (max-width: 980px) {
+  .columns .column {
+    margin-bottom: 5px;
+    flex-basis: 40%;
+    &:nth-last-child(2) {
+      margin-right: 0;
+    }
+    &:last-child {
+      flex-basis: 100%;
+      margin: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .columns .column {
+    flex-basis: 100%;
+    margin: 0 0 5px 0;
+  }
+}
+
+/* This inserts something after the content of selected elements (in this case the elements with class "Row") */
+.Row:after {
+	content: ""; /* By leaving this blank, we are allowing the footer (covered lower down) to be displayed - removing it makes the footer overwrite a column */
+	display: table; /* The display property specifies the type of display behavior; the table value tells the browser to treat the element as a table */
+	clear: both; /* This clears any other elements from floating on the left or the right of an element */
+}
+
+/*----------------------------------------
+    END TABLE STYLING
+------------------------------------------*/
+
+/*----------------------------------------
+    ABOUT STYLING
+------------------------------------------*/
+.border-container {
+    padding: 1.5vw;
+    box-shadow: 15px 20px 2vw #586A65;
+    background-image: url("../portfimages/2.png");
+    border-radius: 100px 300px 50px;
+    position: relative;
+}
+/*----------------------------------------
+    END ABOUT STYLING
+------------------------------------------*/
+
+  /*----------------------------------------
+    BUTTON STYLING 
+------------------------------------------*/
+.ul {
+    z-index: 1;
+    position: relative;
+    display: block;
+}
+
+ul {
+    list-style-type: none;
+}
+
+
+.btn2 {
+    display: inline-flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1em;
+    margin-top: 2em;
+    z-index: 1;
+}
+
+.btn2 {
+    padding: 1em 2em;
+    background-image: url("../portfimages/2.png");
+    box-shadow:  15px 20px 2vw #586A65;
+    color: #015871;
+    font: 1.5vw "Space Mono";
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.3s;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: bold;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    z-index: 1;
+
+}
+
+.btn2:hover {
+    color: #fff;
+    background-color: #254B4A;
+    box-shadow: 1em 1em 0 -0.125em seashell;
+}
+
+
+  /*----------------------------------------
+    END BUTTON STYLING 
+------------------------------------------*/
+
+
+/*----------------------------------------
+    FOOTER
+------------------------------------------*/
+footer {
+    clear: both;
+    position: relative;
+    height: 50px;
+    margin-top: -50px;
+    text-align: center;
+    padding-top: 5em;
+    padding-bottom: .5em;
+    background: transparent;
+}
+
+footer p{
+color: #015871;
+font-weight: bold;
+}
+
+ /*----------------------------------------
+    END FOOTER 
+------------------------------------------*/
+
+  /*----------------------------------------
+    POPUP CONTACT FORM STYLING 
+------------------------------------------*/
+#contact {
+    padding: 1em 2em;
+    margin-top: 2em;
+    box-shadow:  15px 20px 2vw #586A65;
+    position: absolute;
+    color: #015871;
+    background-image: url("../portfimages/2.png");
+    font: 1.5vw "Space Mono";
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.3s;
+    font-weight: bold;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    z-index: 1;
+}
+#contact:hover {
+    color: #fff;
+    box-shadow: 1em 1em 0 -0.125em seashell;
+}
+#contact:active { background: seashell; }
+  
+#contactForm { 
+    display: none;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    box-shadow: 15px 20px 2vw #586A65;
+    padding: 2em;
+    max-width: 50%;
+    text-align: center;
+    background: #d2b48c;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 10;
+    transform: translate(-50%, -50%); 
+    -webkit-transform: translate(-50%,-50%);
+}
+
+  
+input, textarea { 
+    margin: .8em auto;
+    font-family: inherit; 
+    text-transform: inherit; 
+    font-size: inherit;
+    display: block; 
+    width: 100%; 
+    padding: .4em;
+  }
+textarea { height: 80px; resize: none; }
+  
+.formBtn { 
+    width: 100%;
+    display: inline-block;
+    background: #d3ad58;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; 
+    box-shadow: 15px 20px 2vw #586A65;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.2em;
+    padding-bottom: 1.5em;
+    border: none;
+    height: 30px;
+  }
+
+  .formBtn:hover {
+    color: #fff;
+    box-shadow: 1em 1em 0 -0.125em seashell;
+}
+
+  /*----------------------------------------
+    END CONTACT FORM STYLING 
+------------------------------------------*/
+
+
+
+
+
+
+
+
