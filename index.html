@@ -6,77 +6,125 @@
         <title>Esie Vaughn</title>
         
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="./CSS/portfolio.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+
     </head>
     <body>
         <!--Navbar--->
         <div class="Navbar">
             <a href="#home">HOME</a>
-            <a href="#about">ABOUT</a>
             <a href="#contact">CONTACT</a>
+            <a href="#projects">PROJECTS</a>
         </div>
         <br>
         <br>
+        <br>
+        <br>
 
 
-        <div class="wrapper"> 
-            <section class="columns">
-                <div class="column">
-                    <img src="./portfimages/2.png" alt="profile image">
+        <div class="row" id="home"> 
+                <div class="column1">
+                        <img src="./portfimages/esieimg.png" class="image1" alt="profileimage">
                 </div>  
-                <div class="column">
+                <div class="column2">
                     <div class="border-container">
-                        <div class="typewriter">
+                        <img src="./portfimages/backgroundwatercolor.png" class="image2" alt="profileimage">
+                        <div class="about">
                             <h1>WELCOME!</h1>
+                            <div class="typewriter">
+                                    <p>[PYTHON, C#, JAVASCRIPT, HTML , CSS , SQL]</p>
+                            </div>
+                                <p>
+                                    I'm Esie, a full-stack software development student with: 
+                                    <a href="https://www.learncodinganywhere.com/" >The Tech Academy</a>.
+                                    With my education in speech-language pathology, I enjoy breaking down language
+                                    into smaller components to solve bigger puzzles. Translating these skills to 
+                                    software development has expounded my research, logic and design skills.Through
+                                    my professional background in youth programming, disability resources, and 
+                                    community-based coordinating, I've managed online and offline databases, performed website reviews,
+                                    and ran marketing and communication platforms. Finally I made the jump to skill-up my coding abilities, 
+                                    and am eager to combine my background with the tech-sphere!
+                                </p>
                         </div>
-                            <p>
-                                ['JavaScript','Python','HTML','CSS','SQL']
-                                <br><a href="https://www.learncodinganywhere.com/" >The Tech Academy</a>
-                                <br>
-                                <br>
-                                Background in nonprofit youth programming, sustainable agriculture, disability resources
-                                <br>
-                                B.S. in Speech-Language Pathology & Audiology
-                                <br>
-                                <br>
-                                I am excited to delve into design and development, learning from other experts along the way.
-                                <br>
-                                <br>
-                                I hope to integrate tech with my passion for value-based work and connecting with community organizations utilizing software engineering.
-                            </p>
                     </div>
                 </div>
-                    <div class="column">
-                        <div class="ul">
-                            <ul>
-                                <li><a class="btn2" href="https://github.com/esievaughn/Tech-Academy-Projects">GITHUB</a></li>
-                                <li><a class="btn2" href="https://www.linkedin.com/in/esievaughn/">LINKEDIN</a></li>
-                                <li><div id="contact">Contact</div></li>
-                            </ul>
-                        </div>
-                    <div id="contactForm">
-                        <h1>LET'S CONNECT!</h1>
-                            <form action="#">
-                                <input placeholder="Name" type="text" required />
-                                <input placeholder="Email" type="email" required />
-                                <input placeholder="Subject" type="text" required />
-                                <textarea placeholder="Comment"></textarea>
-                                <input class="formBtn" type="submit" />
-                                <input class="formBtn" type="reset" />
-                            </form>
-                    </div> 
-                </div>
         </div>
+                <div class="row" id="contact">
+                        <div id="container">
+                            <button class="learn-more">
+                            <span class="circle" aria-hidden="true">
+                                <span class="icon arrow"></span>
+                            </span>
+                            <a class="button-text" href="https://github.com/esievaughn">GIHUB</a>
+                            </button>
+                            <button class="learn-more">
+                                <span class="circle" aria-hidden="true">
+                                    <span class="icon arrow"></span>
+                                </span>
+                                <a class="button-text" href="https://www.linkedin.com/in/esievaughn/">LINKEDIN</a>
+                            </button>
+                                <button class="learn-more">
+                            <span class="circle" aria-hidden="true">
+                                <span class="icon arrow"></span>
+                            </span>
+                            <span id="popupFormbtn">
+                            <span class="button-text">CONTACT</span>
+                            </span>
+                            </button>
 
+                            <div id="contactForm">
+                                <h1>LET'S CONNECT!</h1>
+                                    <form action="#">
+                                        <input placeholder="Name" type="text" required />
+                                        <input placeholder="Email" type="email" required />
+                                        <input placeholder="Subject" type="text" required />
+                                        <textarea placeholder="Comment"></textarea>
+                                        <input class="formBtn" type="submit" />
+                                        <input class="formBtn" type="reset" />
+                                    </form>
 
+                        </div>
+                    </div>
+                </div>
 
+                <div class="row">
+                    <div class="column3">
+                        <h1 id="projects">PROJECTS</h1>
+                        <div class="flip flip-vertical">
+                            <div class="front" style="background-image: url(./portfimages/home.png)">
+                            </div>
+                            <div class="back">
+                               <h2>PYTHON|DJANGO</h2>
+                               <p>GARDENAPP: CRUD functionality, allowing users to store information about their individual vegetables into two databases.</p>
+                            </div>
+                        </div>
+                        <div class="flip flip-vertical">
+                            <div class="front" style="background-image: url(./portfimages/onepagewebsite.png)">
+                            </div>
+                            <div class="back">
+                               <h2>HTML|CSS</h2>
+                               <p>One-page Website: utilizing HTML & CSS only.</p>
+                            </div>
+                        </div>
+                        <div class="flip flip-vertical">
+                            <div class="front" style="background-image: url(./portfimages/checkbook.png)">
+                            </div>
+                            <div class="back">
+                               <h2>PYTHON|DJANO</h2>
+                               <p>CheckbookApp: basic app where users can select their account and add transactions</p>
+                            </div>
+                        </div>    
+                    </div>
+                </div>
 
 
           
 
         <!--Footer section-->
-        <div class="Row">
+        <div class="row">
             <footer>
                     <p>&copy|ESIE VAUGHN|</p>
             </footer>

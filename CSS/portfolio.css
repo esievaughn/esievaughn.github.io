@@ -9,47 +9,54 @@ html {
 * {
     box-sizing: border-box;
 }
-  
+*::before, *::after {
+  box-sizing: border-box;
+}
+
 
 
 /* Body */
 body {
     margin: 0%;  /* This ensures our site displays all the way to the edge of the browser screen */
     background-position: top;
-    background-color:  #F7EFAD;
+    background-color:  #f7f0ad67;
     background-image: url("../portfimages/otis-redding.png");
 }
 
 /* Heading 1 elements */
 h1 {
     text-transform: uppercase; /* Capitalizing all h1 headings */
-    font-family: montserrat, sans-serif; /* Sets the font family of all h1 headings */
-    font-size: 2vw;
+    font-family: "Amatic SC", cursive; /* Sets the font family of all h1 headings */
+    font-size: 4.5em;
     text-align: center; /* Centering all h1 elements */
-    margin-top: 3%; /* Adds a small margin above h1 elements */
-    color: #015871; 
-    font-weight: bold;
-    filter: grayscale(75%);
+    margin-top: .5%; /* Adds a small margin above h1 elements */
+    margin-bottom: .5%;
+    color: #CE6E3B; 
+    text-shadow: 15px 20px 2vw #586A65;
+}
+
+h2 {
+  text-transform: uppercase; /* Capitalizing all h1 headings */
+  font-family: 'Oswald', sans-serif; /* Sets the font family of all h1 headings */
+  font-size: 2em;
+  text-align: center; /* Centering all h1 elements */
+  margin-top: .5%; /* Adds a small margin above h1 elements */
+  margin-bottom: .5%;
+  color: #CE6E3B; 
+  text-shadow: 15px 20px 2vw #586A65;
 }
 
 
 /* Paragraph elements */
 p {
-    font-family: "Space Mono";
-    font-weight: bold;
-    font-size: 1vw;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.3vw;
     padding-left: 20px; /* Adds padding to the left of the paragraph element */
     padding-right: 20px; /* Adds padding to the right of the paragraph element */
-    color: #654321;
+    color: #085050;
     z-index: 1;
     margin-right: auto;
     margin-left: auto;
-}
-
-/* Paragraph element hover effect */
-p:hover {
-  transition: transform 1s; /* This makes the transform effect last 1 second */
-	transform: scale(1.01); /* This makes the paragraphs increase slightly in size when hovered over */
 }
 
 
@@ -57,30 +64,63 @@ p:hover {
 a {
   color: blue; /* This ensures all links are blue */
   z-index: 10;
+  text-decoration: none;
 }
 
+/*----------------------------------------
+    END GENERAL STYLING
+------------------------------------------*/
+
+
+/*----------------------------------------
+    ABOUT SECTION STYLING
+------------------------------------------*/
+
 /* Image elements */
-img {
-    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; /* Gives all images slightly rounded corners */
+.image1 {
     max-width: 100%; /* Ensures all images stay within the width of their container */
-    height: 340px; /* Sets the height of all images */
+    height: 25em; /* Sets the height of all images */
     display: block; /* By specifying block display we can ensure our images are able to be centered */
     margin-left: auto; /* In combination with "margin-right: auto" this centers all images */
     margin-right: auto;
-    box-shadow: 15px 20px 2vw #586A65;
+    margin-bottom: 0;
+    z-index: -10;
 }
 
+.image2 {
+  max-width: 100%; /* Ensures all images stay within the width of their container */
+  height: 25em; /* Sets the height of all images */
+  display: block; /* By specifying block display we can ensure our images are able to be centered */
+  margin-left: auto; /* In combination with "margin-right: auto" this centers all images */
+  margin-right: auto;
+  margin-bottom: 0;
+  z-index: -10;
+}
 
-
-
-/* The @media rule is used in media queries to apply different styles for different media/types of devices */
-/* On screens 576px and smaller the images will be 100px tall and centered vertically in the column */
 @media screen and (max-width: 576px) {
-    img {
-        height: 100px;
-        margin-top: 150px;
-    }
+  img {
+      height: 100px;
+      margin-top: 150px;
+  }
 }
+.border-container {
+  max-width: 100%;
+  position: relative;
+}
+
+.border-container .about{
+  position: absolute;
+  margin: 0 auto;
+  text-align: center;
+  top: .5%;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+/*----------------------------------------
+    END ABOUT SECTION STYLING
+------------------------------------------*/
+
 
 
 /*----------------------------------------
@@ -102,8 +142,9 @@ img {
     color: #254B4A; /* This is the font color for text on our navbar */
     padding: 14px 16px; /* This adds padding around our text */
     text-decoration: none; /* This gets rid of the underlines under the text on our navbar */
-    font-family: montserrat, sans-serif; /* This specifies the font family for text on our navbar */
-    font-size: 20px; /* This specifies the font size for text on our navbar */
+    font-family: "Amatic SC", cursive; /* This specifies the font family for text on our navbar */
+    font-size: 2em; /* This specifies the font size for text on our navbar */
+    font-weight: bold;
     text-align: center; /* This centers the text within its container */
     position: relative; /* This sets the text relative to its normal positioning, allowing us to use the animation below */
 }
@@ -137,7 +178,7 @@ img {
     TYPEWRITER EFFECT
 ------------------------------------------*/
 
-.typewriter h1 {
+.typewriter p {
     overflow: hidden; /* Ensures the content is not revealed until the animation */
     border-right: .15em solid #CE6E3B; /* The typwriter cursor */
     white-space: nowrap; /* Keeps the content on a single line */
@@ -169,52 +210,40 @@ img {
     TABLE STYLING
 ------------------------------------------*/
 
-.wrapper {
-  padding: 5px;
-  max-width: 100%;
+.row {
+  display: block;
+  transition: all .6s;
+    transition-property: all;
+    transition-duration: 0.6s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column1 {
+  float: left;
+    width: 50%;
+    padding: 1%;
+    height: 300px;
+}
+
+.column2 {
+  float: left;
+  width: 50%;
+  padding: 1%;
+  height: 600px;
+}
+.column3 {
+  margin-top: 15%;
+  float: center;
   width: 100%;
-  margin: 20px auto;
-}
-
-.columns {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  margin: 5px 0;
-}
-
-.column {
-  flex: 1;
-  margin: 2px;
-  padding: 10px;
-  &:first-child {
-    margin-left: 0;
-  }
-  &:last-child {
-    margin-right: 0;
-  }
-}
-
-
-@media screen and (max-width: 980px) {
-  .columns .column {
-    margin-bottom: 5px;
-    flex-basis: 40%;
-    &:nth-last-child(2) {
-      margin-right: 0;
-    }
-    &:last-child {
-      flex-basis: 100%;
-      margin: 0;
-    }
-  }
-}
-
-@media screen and (max-width: 680px) {
-  .columns .column {
-    flex-basis: 100%;
-    margin: 0 0 5px 0;
-  }
+  padding: 1%;
+  height: 600px;
 }
 
 /* This inserts something after the content of selected elements (in this case the elements with class "Row") */
@@ -228,84 +257,238 @@ img {
     END TABLE STYLING
 ------------------------------------------*/
 
-/*----------------------------------------
-    ABOUT STYLING
+
+  /*----------------------------------------
+    POPUP CONTACT FORM STYLING 
 ------------------------------------------*/
-.border-container {
-    padding: 1.5vw;
-    box-shadow: 15px 20px 2vw #586A65;
-    background-image: url("../portfimages/2.png");
-    border-radius: 100px 300px 50px;
+  
+.contactForm { 
+    display: none;
     position: relative;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    box-shadow: 15px 20px 2vw #586A65;
+    max-width: 50%;
+    text-align: center;
+    background: #d2b48c;
+    z-index: 10;
+ 
 }
-/*----------------------------------------
-    END ABOUT STYLING
+
+  
+input, textarea { 
+    margin: .8em auto;
+    font-family: 'Oswald', sans-serif; 
+    text-transform: inherit; 
+    font-size: inherit;
+    display: block; 
+    width: 100%; 
+    padding: .4em;
+    box-shadow: 15px 20px 2vw #586A65;
+  }
+textarea { 
+  height: 80px; 
+  resize: none; 
+}
+  
+.formBtn { 
+    max-width: 20%;
+    border-radius: 50%;
+    display: inline-block;
+    background: #d3ad58;
+    box-shadow: 15px 20px 2vw #586A65;
+    color: #254B4A;
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    font-size: 1.2em;
+    border: none;
+  }
+
+  .formBtn:hover {
+    color: #fff;
+    box-shadow: 15px 20px 2vw seashell;
+}
+
+  /*----------------------------------------
+    END CONTACT FORM STYLING 
 ------------------------------------------*/
 
   /*----------------------------------------
     BUTTON STYLING 
 ------------------------------------------*/
-.ul {
-    z-index: 1;
-    position: relative;
-    display: block;
+
+button {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  background: transparent;
+  padding: 0;
+  font-size: 1.7vw;
+  font-weight: bold;
+  font-family: "Amatic SC", cursive;
+}
+button.learn-more {
+  width: 12rem;
+  height: auto;
+}
+button.learn-more .circle {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: relative;
+  display: block;
+  margin: 0;
+  width: 3rem;
+  height: 3rem;
+  background: #282936;
+  border-radius: 1.625rem;
+}
+button.learn-more .circle .icon {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background: #fff;
+}
+button.learn-more .circle .icon.arrow {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  left: 0.625rem;
+  width: 1.125rem;
+  height: 0.125rem;
+  background: none;
+}
+button.learn-more .circle .icon.arrow::before {
+  position: absolute;
+  content: "";
+  top: -0.25rem;
+  right: 0.0625rem;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-top: 0.125rem solid #fff;
+  border-right: 0.125rem solid #fff;
+  transform: rotate(45deg);
+}
+button.learn-more .button-text {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0.75rem 0;
+  margin: 0 0 0 1.85rem;
+  color: #282936;
+  font-weight: 700;
+  line-height: 1.6;
+  text-align: center;
+  text-transform: uppercase;
+}
+button:hover .circle {
+  width: 100%;
+}
+button:hover .circle .icon.arrow {
+  background: #fff;
+  transform: translate(1rem, 0);
+}
+button:hover .button-text {
+  color: #fff;
 }
 
-ul {
-    list-style-type: none;
-}
+  #container {
+    grid-area: main;
+    align-self: center;
+    justify-self: center;
+    max-width: 50%;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
 
-
-.btn2 {
-    display: inline-flex;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 1em;
-    margin-top: 2em;
-    z-index: 1;
-}
-
-.btn2 {
-    padding: 1em 2em;
-    background-image: url("../portfimages/2.png");
-    box-shadow:  15px 20px 2vw #586A65;
-    color: #015871;
-    font: 1.5vw "Space Mono";
-    text-decoration: none;
-    text-transform: uppercase;
-    transition: 0.3s;
-    margin-left: auto;
-    margin-right: auto;
-    font-weight: bold;
-    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-    z-index: 1;
-
-}
-
-.btn2:hover {
-    color: #fff;
-    background-color: #254B4A;
-    box-shadow: 1em 1em 0 -0.125em seashell;
-}
-
-
-  /*----------------------------------------
+/*----------------------------------------
     END BUTTON STYLING 
 ------------------------------------------*/
 
 
 /*----------------------------------------
+    CARD FLIP STYLING 
+------------------------------------------*/
+  
+.flip {
+  position: relative;
+}
+.flip > .front,
+.flip > .back {
+  display: block;
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition-duration: 0.5s;
+  transition-property: transform, opacity;
+}
+.flip > .back {
+  position: absolute;
+  opacity: 0;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  transform: rotateY(-180deg);
+}
+.flip:hover > .back {
+  opacity: 1;
+  transform: rotateY(0deg);
+}
+.flip.flip-vertical > .back {
+  transform: rotateX(-180deg);
+}
+.flip.flip-vertical:hover > .front {
+  transform: rotateX(180deg);
+}
+.flip.flip-vertical:hover > .back {
+  transform: rotateX(0deg);
+}
+.flip {
+  position: relative;
+  display: inline-block;
+  margin-right: 2px;
+  margin-bottom: 1em;
+  width: 400px;
+}
+.flip > .front,
+.flip > .back {
+  display: block;
+  color: white;
+  width: inherit;
+  background-size: cover !important;
+  background-position: center !important;
+  height: 220px;
+  padding: 1em 2em;
+  background: #313131;
+  border-radius: 10px;
+}
+.flip > .front p,
+.flip > .back p {
+  font-size: 0.9125rem;
+  line-height: 160%;
+  color: #999;
+}
+
+/*----------------------------------------
+    END CARD FLIP STYLING 
+------------------------------------------*/
+  
+
+/*----------------------------------------
     FOOTER
 ------------------------------------------*/
 footer {
-    clear: both;
-    position: relative;
-    height: 50px;
-    margin-top: -50px;
-    text-align: center;
-    padding-top: 5em;
-    padding-bottom: .5em;
-    background: transparent;
+  clear: both;
+  position: relative;
+  height: 50px;
+  margin-top: -50px;
+  text-align: center;
+  padding-top: 5em;
+  padding-bottom: .5em;
+  background: transparent;
 }
 
 footer p{
@@ -313,89 +496,6 @@ color: #015871;
 font-weight: bold;
 }
 
- /*----------------------------------------
-    END FOOTER 
+/*----------------------------------------
+  END FOOTER 
 ------------------------------------------*/
-
-  /*----------------------------------------
-    POPUP CONTACT FORM STYLING 
-------------------------------------------*/
-#contact {
-    padding: 1em 2em;
-    margin-top: 2em;
-    box-shadow:  15px 20px 2vw #586A65;
-    position: absolute;
-    color: #015871;
-    background-image: url("../portfimages/2.png");
-    font: 1.5vw "Space Mono";
-    text-decoration: none;
-    text-transform: uppercase;
-    transition: 0.3s;
-    font-weight: bold;
-    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-    z-index: 1;
-}
-#contact:hover {
-    color: #fff;
-    box-shadow: 1em 1em 0 -0.125em seashell;
-}
-#contact:active { background: seashell; }
-  
-#contactForm { 
-    display: none;
-    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-    box-shadow: 15px 20px 2vw #586A65;
-    padding: 2em;
-    max-width: 50%;
-    text-align: center;
-    background: #d2b48c;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    z-index: 10;
-    transform: translate(-50%, -50%); 
-    -webkit-transform: translate(-50%,-50%);
-}
-
-  
-input, textarea { 
-    margin: .8em auto;
-    font-family: inherit; 
-    text-transform: inherit; 
-    font-size: inherit;
-    display: block; 
-    width: 100%; 
-    padding: .4em;
-  }
-textarea { height: 80px; resize: none; }
-  
-.formBtn { 
-    width: 100%;
-    display: inline-block;
-    background: #d3ad58;
-    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; 
-    box-shadow: 15px 20px 2vw #586A65;
-    color: #fff;
-    font-weight: bold;
-    font-size: 1.2em;
-    padding-bottom: 1.5em;
-    border: none;
-    height: 30px;
-  }
-
-  .formBtn:hover {
-    color: #fff;
-    box-shadow: 1em 1em 0 -0.125em seashell;
-}
-
-  /*----------------------------------------
-    END CONTACT FORM STYLING 
-------------------------------------------*/
-
-
-
-
-
-
-
-

@@ -5,7 +5,7 @@
 $(function() {
   
   // contact form animations
-  $('#contact').click(function() {
+  $('#popupFormbtn').click(function() {
     $('#contactForm').fadeToggle();
   })
   $(document).mouseup(function (e) {
