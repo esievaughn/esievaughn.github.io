@@ -13,9 +13,6 @@ html {
   box-sizing: border-box;
 }
 
-
-
-/* Body */
 body {
     margin: 0%;  /* This ensures our site displays all the way to the edge of the browser screen */
     background-position: top;
@@ -23,7 +20,6 @@ body {
     background-image: url("../portfimages/otis-redding.png");
 }
 
-/* Heading 1 elements */
 h1 {
     text-transform: uppercase; /* Capitalizing all h1 headings */
     font-family: "Amatic SC", cursive; /* Sets the font family of all h1 headings */
@@ -46,8 +42,6 @@ h2 {
   text-shadow: 15px 20px 2vw #586A65;
 }
 
-
-/* Paragraph elements */
 p {
     font-family: 'Oswald', sans-serif;
     font-size: 1.3vw;
@@ -59,8 +53,6 @@ p {
     margin-left: auto;
 }
 
-
-/* Anchor elements */
 a {
   color: blue; /* This ensures all links are blue */
   z-index: 10;
@@ -75,8 +67,6 @@ a {
 /*----------------------------------------
     ABOUT SECTION STYLING
 ------------------------------------------*/
-
-/* Image elements */
 .image1 {
     max-width: 100%; /* Ensures all images stay within the width of their container */
     height: 25em; /* Sets the height of all images */
@@ -96,7 +86,6 @@ a {
   margin-bottom: 0;
   z-index: -10;
 }
-
 
 .border-container {
   position: relative;
@@ -118,7 +107,6 @@ a {
 /*----------------------------------------
     END ABOUT SECTION STYLING
 ------------------------------------------*/
-
 
 
 /*----------------------------------------
@@ -147,17 +135,12 @@ a {
     position: relative; /* This sets the text relative to its normal positioning, allowing us to use the animation below */
 }
 
-
-
-
-/* Navbar hover effects */
 .Navbar a:hover {
     background-color: transparent; /* Defines the background color that will display when you hover over the link */
     color: #CE6E3B; /* This defines the font color that will display when navbar a elements are hovered over */
     font-weight: bold; /* This makes the text on the navbar bold when hovered over */
 }
 
-/* Navbar home button */
 .Navbar a.active { /* This targets the a element on the navbar with the "active" class */
     background-color: darkgray;
 }
@@ -181,13 +164,11 @@ a {
       blink-caret .5s step-end infinite;
   }
   
-  /* The typing effect */
   @keyframes typing {
     from { width: 0 }
     to { width: 100% }
   }
   
-  /* The typewriter cursor effect */
   @keyframes blink-caret {
     from, to { border-color: transparent }
     50% { border-color: orange }
@@ -254,8 +235,6 @@ a {
   padding: 1%;
   height: 600px;
 }
-
-
 
 /*----------------------------------------
     END TABLE STYLING
