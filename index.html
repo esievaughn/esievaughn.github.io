@@ -1,6 +1,13 @@
 <!doctype html>
 <html lang="en">
 <head>
+  <script>
+    const pass = prompt("Enter site password:");
+    if (pass !== "audiology2025") {
+      document.documentElement.innerHTML = "<h2 style='text-align:center; margin-top:4rem;'>Access denied</h2>";
+      throw new Error("Unauthorized");
+    }
+  </script>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta http-equiv="refresh" content="0; url=about.html">
