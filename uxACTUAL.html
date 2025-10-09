@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>UX Case Study – Audiology Portfolio</title>
+  <meta name="description" content="Example UX case study with process and outcomes." />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-slate-900">
+  
+<header class="sticky top-0 z-20 backdrop-blur bg-white/80 border-b border-slate-200">
+  <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+    <a href="about.html" class="flex items-center gap-2 font-semibold tracking-tight text-slate-900">
+      <svg class="w-6 h-6" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="26" cy="26" r="24" class="stroke-slate-400/60" />
+        <path d="M19 21c0-4 3-7 7-7s7 3 7 7c0 2-1 4-3 5-1 1-2 3-2 5 0 3-2 5-5 5" class="stroke-current" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      <span>Esie Vaughn</span>
+    </a>
+    <button id="menuBtn" class="md:hidden rounded-lg border border-slate-300 px-3 py-1">Menu</button>
+    <nav id="menu" class="hidden md:flex items-center gap-1">
+      <a data-nav href="about.html" class="px-3 py-2 rounded-lg hover:bg-slate-100">About</a>
+      <a data-nav href="resume.html" class="px-3 py-2 rounded-lg hover:bg-slate-100">Resume</a>
+      <a data-nav href="clinic.html" class="px-3 py-2 rounded-lg hover:bg-slate-100">Clinic Hours & Background</a>
+      <a data-nav href="ux.html" class="px-3 py-2 rounded-lg hover:bg-slate-100">UX Case Study</a>
+    </nav>
+  </div>
+</header>
+  <main class="max-w-6xl mx-auto px-4">
+    
+<section class="pt-10 md:pt-14">
+  <h1 class="text-3xl md:text-4xl font-semibold tracking-tight">UX Case Study</h1>
+  <p class="mt-2 text-slate-600">Replace the placeholders with your project details or link a PDF.</p>
+</section>
+
+<section class="mt-8 grid md:grid-cols-2 gap-6">
+  <article class="rounded-2xl border border-slate-200 bg-white p-6">
+    <h2 class="text-xl font-semibold">Overview</h2>
+    <p class="mt-2 text-slate-700">[2–3 sentences summarizing users, problem space, and constraints.]</p>
+    <h3 class="mt-6 font-semibold">Problem</h3>
+    <p class="mt-2 text-slate-700">[What was broken or missing; why it mattered.]</p>
+    <h3 class="mt-6 font-semibold">Role & Team</h3>
+    <ul class="mt-2 list-disc pl-5 text-slate-700">
+      <li>Your role (PO/UX/QA)</li>
+      <li>Stakeholders & collaborators</li>
+      <li>Timeline</li>
+    </ul>
+    <a href="assets/case-study.pdf" target="_blank" class="inline-flex mt-6 items-center gap-2 px-3 py-2 rounded-xl border border-slate-300 hover:bg-slate-100">Open Case Study PDF</a>
+  </article>
+
+  <article class="rounded-2xl border border-slate-200 bg-white p-6">
+    <h2 class="text-xl font-semibold">Process</h2>
+    <ol class="mt-2 list-decimal pl-5 space-y-1 text-slate-700">
+      <li>Discovery: interviews, analytics</li>
+      <li>Synthesis: personas, journey maps</li>
+      <li>Design: wires → hi‑fi</li>
+      <li>Validation: usability tests</li>
+      <li>Delivery: handoff, QA</li>
+    </ol>
+    <h3 class="mt-6 font-semibold">Outcomes</h3>
+    <ul class="mt-2 list-disc pl-5 text-slate-700">
+      <li>Impact metrics (e.g., task time −35%, +NPS)</li>
+      <li>Key learnings & next steps</li>
+    </ul>
+    <h3 class="mt-6 font-semibold">Screens & Artifacts</h3>
+    <div class="mt-2 grid grid-cols-2 sm:grid-cols-3 gap-3">
+      <img src="assets/ux/screen-1.jpg" alt="Artifact 1 (replace)" class="w-full aspect-video object-cover rounded-xl bg-slate-100">
+      <img src="assets/ux/screen-2.jpg" alt="Artifact 2 (replace)" class="w-full aspect-video object-cover rounded-xl bg-slate-100">
+      <img src="assets/ux/screen-3.jpg" alt="Artifact 3 (replace)" class="w-full aspect-video object-cover rounded-xl bg-slate-100">
+    </div>
+  </article>
+</section>
+
+  </main>
+  
+<footer class="mt-16 border-t border-slate-200">
+  <div class="max-w-6xl mx-auto px-4 py-10 text-sm text-slate-600">
+    © <span id="year">2025</span> Esie Vaughn. Built with Tailwind on GitHub Pages.
+  </div>
+</footer>
+  <script src="assets/site.js" defer></script>
+</body>
+</html>
