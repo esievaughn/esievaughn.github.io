@@ -1,1 +1,0 @@
-Place your clinic hours and background check images here.
